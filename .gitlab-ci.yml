@@ -23,7 +23,7 @@ stages:
 # Images
 ###
 
-image:buildx:
+image:buildx:tag:
   stage: image
   extends: .docker
   only:
@@ -34,8 +34,21 @@ image:buildx:
         --build-arg BUILDKIT_INLINE_CACHE=1 \
         --cache-from ${CI_REGISTRY_IMAGE}/buildx:latest \
         -t ${CI_REGISTRY_IMAGE}/buildx:${CI_COMMIT_REF_SLUG} \
-        -t ${CI_REGISTRY_IMAGE}/buildx:latest \
         ./buildx/
   after_script:
     - docker push ${CI_REGISTRY_IMAGE}/buildx:${CI_COMMIT_REF_SLUG}
+
+image:buildx:latest:
+  stage: image
+  extends: .docker
+  only:
+    - master
+  script:
+    - |
+      docker build \
+        --build-arg BUILDKIT_INLINE_CACHE=1 \
+        --cache-from ${CI_REGISTRY_IMAGE}/buildx:latest \
+        -t ${CI_REGISTRY_IMAGE}/buildx:latest \
+        ./buildx/
+  after_script:
     - docker push ${CI_REGISTRY_IMAGE}/buildx:latest
