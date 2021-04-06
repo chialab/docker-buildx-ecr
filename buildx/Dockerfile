@@ -4,10 +4,8 @@
 FROM alpine AS fetcher
 
 ARG BUILDX_VERSION=0.5.1
-
-RUN apk add wget \
-    && wget -O /docker-buildx "https://github.com/docker/buildx/releases/download/v${BUILDX_VERSION}/buildx-v${BUILDX_VERSION}.linux-amd64" \
-    && chmod a+x /docker-buildx
+ADD https://github.com/docker/buildx/releases/download/v${BUILDX_VERSION}/buildx-v${BUILDX_VERSION}.linux-amd64 /docker-buildx
+RUN chmod a+x /docker-buildx
 
 ###
 # Get aws-cli helper
