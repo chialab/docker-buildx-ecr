@@ -37,5 +37,5 @@ image:buildx:
         -t ${CI_REGISTRY_IMAGE}/buildx:latest \
         ./buildx/
   after_script:
-    - docker push ${$CI_REGISTRY_IMAGE}/buildx:${CI_COMMIT_REF_SLUG}
+    - docker push ${CI_REGISTRY_IMAGE}/buildx:${CI_COMMIT_REF_SLUG}
     - docker push ${CI_REGISTRY_IMAGE}/buildx:latest
