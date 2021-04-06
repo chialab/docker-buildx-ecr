@@ -24,3 +24,5 @@ FROM docker:20.10
 
 COPY --from=fetcher /docker-buildx /usr/lib/docker/cli-plugins/docker-buildx
 COPY --from=builder /usr/local/bin/aws-ecr-get-login-password /usr/local/bin/
+
+ENV DOCKER_BUILDKIT=1
