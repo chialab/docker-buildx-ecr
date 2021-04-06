@@ -15,6 +15,7 @@ stages:
     DOCKER_CERT_PATH: "$DOCKER_TLS_CERTDIR/client"
     DOCKER_TLS_CERTDIR: '/certs'
     DOCKER_TLS_VERIFY: 1
+    DOCKER_BUILDKIT: 1
   before_script:
     - echo $CI_REGISTRY_PASSWORD | docker login --username $CI_REGISTRY_USER --password-stdin $CI_REGISTRY
 
