@@ -5,7 +5,7 @@
 <p align="center">
     <a href="https://github.com/chialab/docker-buildx-ecr/actions/workflows/main.yml"><img alt="Build status" src="https://github.com/chialab/docker-buildx-ecr/actions/workflows/main.yml/badge.svg"></a>
     <a href="https://www.chialab.it"><img alt="Authors link" src="https://img.shields.io/badge/Authors-Chialab-lightgrey.svg?style=flat-square"></a>
-    <a href="https://github.com/chialab/docker-buildx-ecr/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/github/license/chialab/docker-buildx-ecr.svg?style=flat-square"></a>
+    <a href="https://github.com/chialab/docker-buildx-ecr/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/github/license/chialab/docker-buildx-ecr.svg?style=flat-square"></a>
 </p>
 
 ---
