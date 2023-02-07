@@ -11,7 +11,4 @@ RUN go install -ldflags "-linkmode external -extldflags -static" github.com/chia
 ###
 FROM docker:23.0
 
-COPY --from=docker/buildx-bin /buildx /usr/libexec/docker/cli-plugins/docker-buildx
 COPY --from=builder /usr/local/bin/aws-ecr-get-login-password /usr/local/bin/
-
-ENV DOCKER_BUILDKIT=1
