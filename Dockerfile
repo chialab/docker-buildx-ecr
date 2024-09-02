@@ -9,6 +9,6 @@ RUN go install -ldflags "-linkmode external -extldflags -static" github.com/chia
 ###
 # Final image
 ###
-FROM docker:27.1.2-cli
+FROM docker:27.2.0-cli
 
 COPY --from=builder /usr/local/bin/aws-ecr-get-login-password /usr/local/bin/
