@@ -10,6 +10,11 @@
 
 ---
 
+> [!IMPORTANT]
+> This repository is archived. The image is now built from
+> [`chialab/aws-ecr-get-login-password`](https://github.com/chialab/aws-ecr-get-login-password/tree/main/docker-buildx-ecr).
+> The image name `ghcr.io/chialab/docker-buildx-ecr` and its tags do not change.
+
 Docker image built on top of [official Docker image](https://hub.docker.com/_/docker),
 with the addition of a [helper binary](https://github.com/chialab/aws-ecr-get-login-password) to get a login token for AWS ECR.
 
